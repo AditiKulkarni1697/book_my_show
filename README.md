@@ -29,6 +29,7 @@ This document outlines the database structure and sample queries for a `BookMySh
 - `customer_id` (Primary Key)
 - `customer_name`
 - `customer_email`
+- `customer_password`
 
 ### **Seat**
 - `seat_no`
@@ -42,6 +43,8 @@ This document outlines the database structure and sample queries for a `BookMySh
 - `show_id` (Foreign Key)
 
 ---
+
+![alt text](image.png)
 
 ## **Database Table Structure**
 
@@ -320,16 +323,28 @@ mysql> create index name_movie ON movie(movie_name);
 Query OK, 0 rows affected (0.03 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 ```
+
+To optimize queries involving the `theater_name`:
 ```sql
 mysql> create index theater_n on theater(theater_name);
 Query OK, 0 rows affected (0.04 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 ```
+
+To optimize queries involving the `date`:
 ```sql
 mysql> create index show_date on shows(date);
 Query OK, 0 rows affected (0.04 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 ```
+
+To optimize queries involving the `theater_location`:
+```sql
+mysql> create index theater_l on theater(theater_location);
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+```
+
 
 ### **2. Query for Shows at a Specific Theater**
 Retrieve movie name, language, and time for shows at `Cineplex` on `2023-12-01`:
