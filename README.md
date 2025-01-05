@@ -44,7 +44,7 @@ This document outlines the database structure and sample queries for a `BookMySh
 
 ---
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 ## **Database Table Structure**
 
