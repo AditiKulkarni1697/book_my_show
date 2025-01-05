@@ -47,8 +47,6 @@ This document outlines the database structure and sample queries for a `BookMySh
 
 ### **1. Create Database**
 ```sql
-CREATE DATABASE bookmyshow;
-```
 mysql> CREATE DATABASE bookmyshow;
 Query OK, 1 row affected (0.01 sec)
 
@@ -64,6 +62,8 @@ mysql> show databases;
 | sys                |
 +--------------------+
 6 rows in set (0.00 sec)
+```
+
 ### **2. Create Tables**
 mysql> use bookmyshow;
 Database changed
